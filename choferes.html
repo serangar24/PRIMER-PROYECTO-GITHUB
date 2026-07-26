@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Placa Recepción Hotel - Tangos y Milongas</title>
-  <!-- Tailwind CSS CDN para previsualización -->
+  <title>Vista: Choferes - Tangos y Milongas</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black min-h-screen flex items-center justify-center p-4">
+<body class="bg-black min-h-screen flex flex-col items-center justify-center p-4">
+
+  <!-- Navegación entre modelos -->
+  <nav class="flex justify-center gap-2 mb-6 bg-[#181818] p-1.5 rounded-xl border border-neutral-800">
+    <a href="recepcion.html" class="px-4 py-2 text-xs font-medium rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors">🏨 Recepción</a>
+    <a href="choferes.html" class="px-4 py-2 text-xs font-bold rounded-lg bg-[#d4af37] text-black shadow-md transition-colors">🚘 Choferes</a>
+    <a href="guias.html" class="px-4 py-2 text-xs font-medium rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors">🎙️ Guías</a>
+  </nav>
 
   <!-- Modal Container -->
   <div class="max-w-md w-full mx-auto bg-[#121212] text-white p-6 rounded-2xl border border-neutral-800 shadow-2xl font-sans">
@@ -15,7 +21,7 @@
     <!-- Header: Badge & Close -->
     <div class="flex justify-between items-center mb-4">
       <span class="px-3 py-1 bg-[#1a1710] border border-[#d4af37] text-[#d4af37] text-xs font-semibold rounded-full flex items-center gap-1">
-        ✓ Recomendado por tu Hotel
+        ✓ Recomendado en tu Traslado
       </span>
       <button class="text-neutral-500 hover:text-white text-lg transition-colors">✕</button>
     </div>
@@ -23,17 +29,17 @@
     <!-- Profile Section -->
     <div class="flex items-center gap-3 mb-4">
       <div class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center text-xl">
-        🏨
+        🚘
       </div>
       <div>
-        <h3 class="text-xl font-serif text-white font-semibold">Leon</h3>
-        <p class="text-xs text-[#d4af37]">Recepción</p>
+        <h3 class="text-xl font-serif text-white font-semibold">Carlos</h3>
+        <p class="text-xs text-[#d4af37]">Servicio de Traslado</p>
       </div>
     </div>
 
     <!-- Main Body Text -->
     <p class="text-neutral-300 text-sm leading-relaxed mb-6">
-      ¡Hola! Esta experiencia fue recomendada por <strong class="text-white">Leon</strong>. Reservá tu lugar de forma directa con el respaldo y la garantía oficial de <strong class="text-white">Tangos y Milongas Tickets</strong>.
+      ¡Hola! Esta experiencia fue recomendada por <strong class="text-white">Carlos</strong> durante tu viaje. Reservá tu lugar de forma directa con el respaldo y la garantía oficial de <strong class="text-white">Tangos y Milongas Tickets</strong>.
     </p>
 
     <hr class="border-neutral-800 my-4" />
@@ -54,7 +60,7 @@
 
       <div class="flex items-start gap-3">
         <span class="w-6 h-6 rounded-full bg-neutral-800 text-[#d4af37] text-xs flex items-center justify-center font-bold shrink-0">3</span>
-        <p class="text-sm text-neutral-200">Pagá online de forma segura o en efectivo a Recepción</p>
+        <p class="text-sm text-neutral-200">Pagá online de forma segura o en efectivo a tu chofer</p>
       </div>
     </div>
 
