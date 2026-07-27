@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shows de Tango - Tangos y Milongas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white min-h-screen py-12 px-4 md:px-8 font-sans">
+
+  <main class="max-w-6xl mx-auto">
+    
+    <!-- Header de la sección -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+      <div>
+        <span class="text-xs font-semibold text-[#d4af37] tracking-widest uppercase mb-1 block">
+          SHOWS DE TANGO
+        </span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white tracking-tight">
+          Casas destacadas
+        </h2>
+      </div>
+      <a href="#" class="inline-flex items-center gap-1 px-4 py-2 text-xs font-medium text-neutral-300 hover:text-white bg-[#181818] hover:bg-neutral-800 border border-neutral-800 rounded-full transition-colors self-start sm:self-auto">
+        Ver todos (15) →
+      </a>
+    </div>
+
+    <!-- Grilla de Tarjetas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- TARJETA 1: Señor Tango -->
+      <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+        <!-- Imagen con badge de ubicación -->
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1545232979-fbf59202c38d?q=80&w=800&auto=format&fit=crop" alt="Señor Tango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+          
+          <!-- Badge Ubicación -->
+          <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md flex items-center gap-1 shadow-md">
+            📍 Barracas
+          </span>
+        </div>
+
+        <!-- Contenido de la Tarjeta -->
+        <div class="p-5 flex flex-col flex-grow">
+          <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Catedral del Tango</span>
+          <h3 class="text-xl font-serif font-bold text-white mb-2">Señor Tango</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+            Un espectáculo monumental con despliegue escénico único, orquesta en vivo y más de 40 artistas en escena.
+          </p>
+
+          <!-- Chips / Features clave -->
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">
+              🚘 Transfer inc.
+            </span>
+            <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">
+              🍽️ Cena 3 pasos
+            </span>
+            <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">
+              🍷 Bebidas libres
+            </span>
+          </div>
+
+          <!-- Footer de la Tarjeta: Precio y CTA -->
+          <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+              <div class="flex items-baseline gap-1">
+                <span class="text-lg font-bold text-white">USD 38</span>
+                <span class="text-xs text-neutral-400 font-medium">· ARS 57.760</span>
+              </div>
+            </div>
+            <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors flex items-center gap-1 shadow-md">
+              Ver más →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA 2: Tango Porteño -->
+      <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+        <!-- Imagen con badge de ubicación -->
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop" alt="Tango Porteño" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+          
+          <!-- Badge Ubicación -->
+          <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md flex items-center gap-1 shadow-md">
+            📍 Obelisco
+          </span>
+        </div>
+
+        <!-- Contenido de la Tarjeta -->
+        <div class="p-5 flex flex-col flex-grow">
+          <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Época de Oro</span>
+          <h3 class="text-xl font-serif font-bold text-white mb-2">Tango Porteño</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+            Elegancia y glamour a pasos del Obelisco. Reviví la década del 40 en un majestuoso cine-teatro art déco.
+          </p>
+
+          <!-- Chips / Features clave -->
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">
+              🚘 Transfer opcional
+            </span>
+            <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">
+              🍽️ Menú Gourmet
+            </span>
+            <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">
+              🎭 Cine-Teatro Art Déco
+            </span>
+          </div>
+
+          <!-- Footer de la Tarjeta -->
+          <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+              <div class="flex items-baseline gap-1">
+                <span class="text-lg font-bold text-white">USD 38</span>
+                <span class="text-xs text-neutral-400 font-medium">· ARS 57.760</span>
+              </div>
+            </div>
+            <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors flex items-center gap-1 shadow-md">
+              Ver más →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA 3: La Ventana -->
+      <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+        <!-- Imagen con badge de ubicación -->
+        <div class="relative h-52 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop" alt="La Ventana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+          
+          <!-- Badge Ubicación -->
+          <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md flex items-center gap-1 shadow-md">
+            📍 San Telmo
+          </span>
+        </div>
+
+        <!-- Contenido de la Tarjeta -->
+        <div class="p-5 flex flex-col flex-grow">
+          <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Tradición Porteña</span>
+          <h3 class="text-xl font-serif font-bold text-white mb-2">La Ventana</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+            Un recorrido histórico por el tango y el folclore en un conventillo restaurado en el corazón de San Telmo.
+          </p>
+
+          <!-- Chips / Features clave -->
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">
+              🚘 Transfer inc.
+            </span>
+            <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">
+              🍷 Bodega Selección
+            </span>
+            <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">
+              🪗 Show Folclórico
+            </span>
+          </div>
+
+          <!-- Footer de la Tarjeta -->
+          <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+              <div class="flex items-baseline gap-1">
+                <span class="text-lg font-bold text-white">USD 70</span>
+                <span class="text-xs text-neutral-400 font-medium">· ARS 106.400</span>
+              </div>
+            </div>
+            <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors flex items-center gap-1 shadow-md">
+              Ver más →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NOTA DE PAGO UNIFICADA AL PIE (Aviso general que limpia las tarjetas) -->
+    <div class="mt-8 bg-[#181818] p-4 rounded-xl border border-neutral-800 text-center shadow-lg">
+      <p class="text-xs text-neutral-400 leading-relaxed">
+        🛡️ <strong class="text-neutral-200">Garantía de cobro seguro:</strong> Con tarjeta (Mercado Pago / Internacional) la transacción se procesa en pesos argentinos (ARS). Con <strong class="text-[#00dda8]">PIX</strong> el cobro es en reales (BRL). Los valores en USD son de referencia según el tipo de cambio oficial.
+      </p>
+    </div>
+
+  </main>
+
+</body>
+</html>
