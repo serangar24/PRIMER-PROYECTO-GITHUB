@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tangos y Milongas - Reserva Oficial de Shows de Tango en Buenos Aires</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans antialiased selection:bg-[#d4af37] selection:text-black">
+
+  <!-- ========================================== -->
+  <!-- 1. BARRA DE NAVEGACIÓN                     -->
+  <!-- ========================================== -->
+  <header class="border-b border-neutral-900 bg-black/90 backdrop-blur-md fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-10 h-10 border border-[#d4af37] rounded-lg flex items-center justify-center bg-[#1a1710]">
+          <span class="text-xl font-serif text-[#d4af37] font-bold">T</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg font-bold tracking-wider text-white leading-none">TANGOS <span class="text-[#d4af37]">&</span> MILONGAS</span>
+          <span class="text-[9px] tracking-widest text-neutral-400 uppercase">Buenos Aires Shows</span>
+        </div>
+      </a>
+
+      <!-- Menú Central -->
+      <nav class="hidden md:flex items-center gap-8 text-sm text-neutral-300 font-medium">
+        <a href="#shows" class="hover:text-[#d4af37] transition-colors">Shows de Tango</a>
+        <a href="#paso-a-paso" class="hover:text-[#d4af37] transition-colors">Cómo Reservar</a>
+        <a href="#faq" class="hover:text-[#d4af37] transition-colors">Preguntas Frecuentes</a>
+      </nav>
+
+      <!-- Selector Idioma & Botón Reservar -->
+      <div class="flex items-center gap-4">
+        <div class="text-xs text-neutral-400 flex items-center gap-1.5 font-medium">
+          <span class="text-white font-bold">ES</span> • <span>EN</span> • <span>PT</span>
+        </div>
+        <a href="#shows" class="px-5 py-2.5 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+          Reservar
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- ========================================== -->
+    <!-- 2. PANTALLA DE INICIO (HERO + BUSCADOR)    -->
+    <!-- ========================================== -->
+    <section class="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-16 text-center border-b border-neutral-900">
+      
+      <!-- Fondo con Imagen y Overlay Oscuro -->
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1600&auto=format&fit=crop" alt="Tango Show Buenos Aires" class="w-full h-full object-cover opacity-25 filter blur-xs">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto w-full">
+        <span class="text-xs font-semibold text-[#d4af37] tracking-[0.25em] uppercase mb-3 block">
+          BUENOS AIRES · CASAS DE TANGO
+        </span>
+        <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-white mb-8">
+          Vivís el tango. No solo lo mirás.
+        </h1>
+
+        <!-- CAJA DE BÚSQUEDA DIRECTA -->
+        <div class="bg-[#121212]/90 backdrop-blur-md p-6 rounded-2xl border border-neutral-800 shadow-2xl max-w-2xl mx-auto mb-8 text-left">
+          <h3 class="text-base font-serif text-[#d4af37] font-semibold text-center mb-1">
+            Reservá en un click
+          </h3>
+          <p class="text-xs text-neutral-400 text-center mb-6">
+            Elegí una casa de tango o un servicio y vas directo a la reserva oficial.
+          </p>
+
+          <div class="space-y-4">
+            <div>
+              <label class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider mb-1.5 block">Casa de Tango</label>
+              <select class="w-full bg-[#181818] border border-neutral-700 text-neutral-200 text-sm rounded-xl p-3 focus:outline-none focus:border-[#d4af37] transition-colors">
+                <option value="">🏠 Seleccioná entre las 14 casas de tango...</option>
+                <option value="senor-tango">Señor Tango (Barracas)</option>
+                <option value="tango-porteno">Tango Porteño (Obelisco)</option>
+                <option value="la-ventana">La Ventana (San Telmo)</option>
+                <option value="madero-tango">Madero Tango (Puerto Madero)</option>
+                <option value="rojo-tango">Rojo Tango - Faena Hotel (Puerto Madero)</option>
+                <option value="cafe-angelitos">Café de los Angelitos (Balvanera)</option>
+                <option value="el-querandi">El Querandí (San Telmo)</option>
+                <option value="piazzolla-tango">Piazzolla Tango (Centro)</option>
+                <option value="homero-manzi">Esquina Homero Manzi (Boedo)</option>
+                <option value="viejo-almacen">El Viejo Almacén (San Telmo)</option>
+                <option value="catulo-tango">Cátulo Tango (Abasto)</option>
+                <option value="aljibe-tango">El Aljibe Tango (San Telmo)</option>
+                <option value="gala-tango">Gala Tango (San Telmo)</option>
+                <option value="michelangelo">Michelangelo (San Telmo)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider mb-1.5 block">Servicio / Experiencia</label>
+              <select class="w-full bg-[#181818] border border-neutral-800 text-neutral-500 text-sm rounded-xl p-3 cursor-not-allowed" disabled>
+                <option value="">⭐ Primero elegí una casa de tango</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+          <a href="#shows" class="px-6 py-3 bg-[#181818] hover:bg-neutral-800 text-white font-medium text-sm rounded-xl border border-neutral-700 transition-colors">
+            Ver las 14 casas
+          </a>
+          <a href="https://wa.me/" target="_blank" class="px-6 py-3 bg-[#121212] hover:bg-neutral-900 text-neutral-300 font-medium text-sm rounded-xl border border-neutral-800 transition-colors flex items-center gap-2">
+            💬 Asesoramiento por WhatsApp
+          </a>
+        </div>
+
+        <!-- Barra de Confianza -->
+        <div class="inline-flex flex-wrap justify-center items-center gap-4 md:gap-8 px-6 py-3 bg-[#121212]/80 border border-neutral-800 rounded-2xl text-xs text-neutral-300">
+          <span class="flex items-center gap-1.5 font-semibold text-white">
+            🛡️ Tarifa Oficial Garantizada
+          </span>
+          <span class="hidden md:inline text-neutral-700">•</span>
+          <span class="flex items-center gap-1.5">
+            💳 <strong>Tarjeta:</strong> Crédito y Débito
+          </span>
+          <span class="hidden md:inline text-neutral-700">•</span>
+          <span class="flex items-center gap-1.5 text-[#00dda8]">
+            ❖ <strong>PIX:</strong> Reales (BRL)
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. PASO A PASO                             -->
+    <!-- ========================================== -->
+    <section id="paso-a-paso" class="py-16 px-4 max-w-6xl mx-auto">
+      <div class="bg-[#121212] border border-neutral-800 rounded-2xl p-6 md:p-10 shadow-2xl">
+        <h2 class="text-2xl font-serif font-bold text-white mb-1">Cómo reservás, paso a paso</h2>
+        <p class="text-xs text-neutral-400 mb-8">En pocos minutos elegís y asegurás tu noche de tango con confirmación inmediata.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          
+          <div class="space-y-2">
+            <span class="w-8 h-8 rounded-full bg-[#1a1710] border border-[#d4af37]/40 text-[#d4af37] text-xs font-bold flex items-center justify-center">1</span>
+            <h4 class="text-sm font-bold text-white">Elegí tu experiencia</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed">Explorá las casas de tango y compará sus propuestas de cena, show y traslado.</p>
+          </div>
+
+          <div class="space-y-2">
+            <span class="w-8 h-8 rounded-full bg-[#1a1710] border border-[#d4af37]/40 text-[#d4af37] text-xs font-bold flex items-center justify-center">2</span>
+            <h4 class="text-sm font-bold text-white">Fecha y personas</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed">Seleccioná la fecha, cantidad de asistentes y la categoría que prefieras.</p>
+          </div>
+
+          <div class="space-y-2">
+            <span class="w-8 h-8 rounded-full bg-[#1a1710] border border-[#d4af37]/40 text-[#d4af37] text-xs font-bold flex items-center justify-center">3</span>
+            <h4 class="text-sm font-bold text-white">Reservá y pagá online</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed">Pago 100% seguro. Recibís tu voucher oficial al instante en tu email o WhatsApp.</p>
+          </div>
+
+          <div class="space-y-2">
+            <span class="w-8 h-8 rounded-full bg-[#1a1710] border border-[#d4af37]/40 text-[#d4af37] text-xs font-bold flex items-center justify-center">4</span>
+            <h4 class="text-sm font-bold text-white">Disfrutá la noche</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed">Te esperamos con lugar reservado y servicio de traslado si tu opción lo incluye.</p>
+          </div>
+
+        </div>
+
+        <a href="#shows" class="inline-block px-6 py-2.5 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors">
+          Explorar experiencias
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. CASAS DESTACADAS (14 TARJETAS OPTIMIZADAS) -->
+    <!-- ========================================== -->
+    <section id="shows" class="py-12 px-4 md:px-8 max-w-6xl mx-auto">
+      
+      <!-- Header de la grilla -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-xs font-semibold text-[#d4af37] tracking-widest uppercase mb-1 block">
+            CATÁLOGO COMPLETO
+          </span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-white tracking-tight">
+            Casas de Tango en Buenos Aires
+          </h2>
+        </div>
+        <span class="text-xs font-medium text-neutral-400 bg-[#181818] px-3 py-1.5 rounded-full border border-neutral-800 self-start sm:self-auto">
+          14 Casas Disponibles
+        </span>
+      </div>
+
+      <!-- Grilla 3 columnas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- TARJETA 1: Señor Tango -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop" alt="Señor Tango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 Barracas
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Catedral del Tango</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Señor Tango</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Superproducción creada por Fernando Soler. Un show monumental con orquesta en vivo, efectos de luces y más de 40 artistas en escena.
+            </p>
+
+            <!-- CHIPS ACTUALIZADOS: Oferta general + Arte -->
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🎭 +40 Artistas</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 45</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 68.400</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 2: Tango Porteño -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop" alt="Tango Porteño" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 Obelisco
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Época de Oro</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Tango Porteño</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Ubicado a metros del Obelisco en un histórico cine-teatro art déco. Recrea con elegancia la magia de la década dorada del tango.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🏛️ Teatro Art Déco</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 38</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 57.760</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 3: La Ventana -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=800&auto=format&fit=crop" alt="La Ventana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 San Telmo
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Tradición Porteña</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">La Ventana</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Un recorrido cultural por el tango y el folclore en un conventillo restaurado del histórico barrio de San Telmo.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🪗 Tango y Folclore</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 70</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 106.400</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 4: El Viejo Almacén -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=800&auto=format&fit=crop" alt="El Viejo Almacén" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 San Telmo
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Templo Histórico desde 1969</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">El Viejo Almacén</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Fundado por Edmundo Rivero en una histórica esquina colonial. Un ambiente íntimo con cena internacional y espectáculo tradicional puro.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🏛️ Salón Histórico</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 75</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 114.000</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 5: Michelangelo -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop" alt="Michelangelo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 San Telmo
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Catedral Nocturna de 1850</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Michelangelo</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Un edificio histórico restaurado de impresionante arquitectura colonial. Acústica de nivel internacional, show de tango y folclore supremo.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🏛️ Edificio de 1850</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 110</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 167.200</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 6: Gala Tango -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1545232979-fbf59202c38d?q=80&w=800&auto=format&fit=crop" alt="Gala Tango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 San Telmo VIP
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Elegancia & Menú a la Carta</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Gala Tango</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Un salón íntimo estilo francés de máximo lujo. Incluye clase de tango previa o degustación de vinos, alta cocina y vinos boutique.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">👑 Tarifas VIP</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">💃 Clase de Tango inc.</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 140</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 212.800</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 7: El Aljibe Tango -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=800&auto=format&fit=crop" alt="El Aljibe Tango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 San Telmo
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Tradición & Agilidad</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">El Aljibe Tango</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Un espectáculo dinámico en un ambiente colonial cálido. Ideal para quienes buscan un show temprano, ágil y de altísima calidad artística.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">⏰ Horario Temprano</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 50</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 76.000</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 8: Cátulo Tango -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop" alt="Cátulo Tango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 Abasto
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Pasión del Abasto</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Cátulo Tango</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Emplazado en el legendario barrio de Carlos Gardel. Excelente gastronomía, visión panorámica desde todas las mesas y orquesta en vivo.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🥂 Opciones con Bebidas</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 40</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 60.800</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 9: Madero Tango -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop" alt="Madero Tango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 Puerto Madero
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Vista Panorámica</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Madero Tango</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Un espectáculo moderno con una impresionante vista al dique y rascacielos de Puerto Madero. Combina comedia musical y tango.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🌊 Vista Panorámica</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 50</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 76.000</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 10: Rojo Tango -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1545232979-fbf59202c38d?q=80&w=800&auto=format&fit=crop" alt="Rojo Tango Faena" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 Faena Hotel
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Lujo & Exclusividad VIP</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Rojo Tango</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              La experiencia más íntima y exclusiva de Buenos Aires dentro del Faena Hotel. Gastronomía de alta gama y champán Baron B libre.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">👑 Tarifas VIP</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">⭐ Máx 80 pax</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 220</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 334.400</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 11: Café de los Angelitos -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=800&auto=format&fit=crop" alt="Café de los Angelitos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 Balvanera
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Historia & Elegancia</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Café de los Angelitos</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Un café histórico frecuentado por Carlos Gardel. Ofrece un show de estilo clásico, vestuarios deslumbrantes y cena gourmet.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">📜 Café Notable</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 90</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 136.800</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 12: El Querandí -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop" alt="El Querandí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 San Telmo
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">San Telmo Íntimo</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">El Querandí</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Ubicado en una casona de 1920. Propone un viaje temático e íntimo por la historia del tango desde sus orígenes hasta Piazzolla.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🍷 Maridaje Opcional</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 65</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 98.800</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 13: Piazzolla Tango -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop" alt="Piazzolla Tango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 Galerías Pacífico
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Teatro Guastavino</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Piazzolla Tango</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Un teatro Belle Époque restaurado debajo de las Galerías Pacífico. Homenaje a la vanguardia y composiciones de Astor Piazzolla.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🎵 Homenaje Piazzolla</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 55</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 83.600</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 14: Esquina Homero Manzi -->
+        <div class="bg-[#121212] border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col hover:border-[#d4af37]/40 transition-all duration-300 group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=800&auto=format&fit=crop" alt="Esquina Homero Manzi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-black/40"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-black/75 backdrop-blur-md border border-white/10 text-white text-xs font-medium rounded-md shadow-md">
+              📍 Boedo
+            </span>
+          </div>
+
+          <div class="p-5 flex flex-col flex-grow">
+            <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-1">Tango Tradicional</span>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">Homero Manzi</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-4 line-clamp-2">
+              Edificio histórico en la mítica esquina de Boedo y San Juan. Una propuesta auténtica, cálida y popular de puro tango de barrio.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🍽️ Opciones Cena Show</span>
+              <span class="px-2 py-0.5 bg-[#1a1710] border border-[#d4af37]/30 text-[#d4af37] text-[11px] rounded-md font-medium">🎫 Opción Solo Show</span>
+              <span class="px-2 py-0.5 bg-neutral-800/80 border border-neutral-700 text-neutral-300 text-[11px] rounded-md">🏛️ Sitio Histórico</span>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-neutral-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase text-neutral-400 font-semibold block">Desde</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-lg font-bold text-white">USD 30</span>
+                  <span class="text-xs text-neutral-400 font-medium">· ARS 45.600</span>
+                </div>
+              </div>
+              <a href="#" class="px-3.5 py-2 bg-[#d4af37] hover:bg-[#b88f40] text-black font-semibold text-xs rounded-lg transition-colors shadow-md">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- AVISO DE PAGO UNIFICADO AL PIE DE LA GRILLA -->
+      <div class="mt-8 bg-[#181818] p-4 rounded-xl border border-neutral-800 text-center shadow-lg">
+        <p class="text-xs text-neutral-400 leading-relaxed">
+          🛡️ <strong class="text-neutral-200">Garantía de cobro seguro:</strong> Con tarjeta (Mercado Pago / Internacional) la transacción se procesa en pesos argentinos (ARS). Con <strong class="text-[#00dda8]">PIX</strong> el cobro es en reales (BRL). Los valores en USD son de referencia según el tipo de cambio oficial.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 5. FOOTER CON DESLINDE LEGAL               -->
+  <!-- ========================================== -->
+  <footer class="bg-[#0a0a0a] border-t border-neutral-900 py-10 px-4 mt-20 text-xs text-neutral-500">
+    <div class="max-w-6xl mx-auto space-y-6 text-center md:text-left">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-neutral-900 pb-6">
+        <span class="font-serif text-lg font-bold text-white tracking-wider">TANGOS & MILONGAS</span>
+        <p class="text-neutral-400">Plataforma oficial de comercialización directa de experiencias de tango en Buenos Aires.</p>
+      </div>
+      <p class="leading-relaxed max-w-4xl">
+        <strong>Aviso Legal:</strong> Tangos y Milongas Tickets es una plataforma independiente de comercialización directa. Los hoteles, choferes, guías y comercios adheridos actúan únicamente como canales de recomendación e información. La atención al cliente, emisión de vouchers, facturación y soporte post-venta son responsabilidad exclusiva de Tangos y Milongas Tickets.
+      </p>
+      <div class="text-neutral-600">
+        © 2026 Tangos & Milongas Tickets. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
